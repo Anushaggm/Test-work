@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h1 style="text-align: center; margin: 100px;">BEARS</h1>
+        <a href="{% url 'add_bear' %}">Add Bear</a>
+        <div >
+        {% for bear in bears %}
+           <button class="listbear">
+               <label class="name">{{ bear.name }}</label> <label class="type">{{ bear.get_bear_type_display }} </label>
+           </button><br>
+        {% endfor %}
+        </div>
+{% endblock %}

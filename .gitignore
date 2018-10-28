@@ -1,0 +1,9 @@
+*.pyc
+*.pyo
+*.py~
+.idea/
+media
+staticfiles/
+.idea/*
+local.env
+../env/

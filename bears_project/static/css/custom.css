@@ -1,0 +1,23 @@
+.succesmsg{
+    color: green;
+}
+.errormessage{
+    color: red;
+}
+.listbear{
+    text-align: center;
+    width: 300px;
+    border: 25px solid #ffffff;
+    padding: 25px;
+}
+.name{
+    font-weight: 900;
+    font-size: x-large;
+}
+.type{
+    font-style: italic;
+    font-size: large;
+}
+a{
+        margin: 46%;
+}

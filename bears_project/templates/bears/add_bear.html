@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+        <head>
+	<title>Add Bear</title>
+        </head>
+        {% endblock %}
+{% block main %}
+
+
+		<!-- contain main informative part of the site -->
+		<main id="main">
+			<!-- bg block top-->
+
+			<div class="main-hold">
+				<!-- contain the main content of the page -->
+				<div class="container">
+					<div class="registeren-holder">
+						
+						<!-- inloggen-form -->
+						<div class="registeren-box light-gray-bg " style="text-align: center; margin: 100px;">
+							<h1 class="headline">Add Bear</h1>
+                            <form method="post" novalidate>
+                                {% csrf_token %}
+                                <div class="form-group">
+										<label for="name">Name <span class="form-star">*</span></label>
+										<input type="text" class="form-control" id="name"><br>
+                                        <span id="span_name" class="errormessage"></span><br>
+                                    </div>
+									<div class="form-group">
+										<label for="bear_type">Bear Type <span class="form-star">*</span></label>
+										<select id="bear_type">
+                                              <option value="grizzy">Grizzy</option>
+                                              <option value="mini">Mini</option>
+                                            </select><br>
+                                        <span id="span_bear_type" class="errormessage"></span><br>
+                                    </div>
+									
+									
+									
+									<button type="button" value="Submit" id="create_bear"
+                                            class="btn btn-info btn-lg">Submit</button> <br>
+                                    <span id="span_success" class="succesmsg"></span><br>
+                                    <span id="span_failure" class="errormessage"></span><br>
+							</form>
+						</div>
+					</div>
+				</div>
+				<!-- bg block bottom-->
+
+			</div>
+		</main>
+<input type="hidden" id="csrf" value="{{csrf_token}}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="{% static 'js/custom.js'%}"></script>
+
+{% endblock %}
