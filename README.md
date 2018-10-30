@@ -1,5 +1,5 @@
 # Test-work
-1. Clone the repo.
+1.Clone the repo.
 
 2.Create virtualenv and install requirements.txt .
 
